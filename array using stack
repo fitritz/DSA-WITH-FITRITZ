@@ -1,0 +1,29 @@
+public class ArrayUsingStack {
+    
+    
+    public static void main(String[] args) {
+        int arr1[]={1,5,4,12,6,7,8,9};
+        int n=arr1.length;
+        int max;
+        int arr2[]=new int[n];
+        int r=0;
+        for(int i=0;i<n;i++){
+            max=arr1[i];
+            for(int j=i+1;j<n;j++){
+if(arr1[j]>max){
+max=arr1[j];
+arr2[r++]=max;
+break;
+}
+            }
+            if(max==arr1[i])
+            arr2[r++]=-1;
+        }
+        for(int w=0;w<n;w++){
+            System.out.print(arr2[w]+" ");
+        }
+    }
+    
+}
+
+
